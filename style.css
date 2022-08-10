@@ -1,0 +1,389 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+    background: radial-gradient(#e6e6ff, #ffeb99);
+}
+.header .row{
+    margin-top: 20px;
+}
+
+body{
+    font-family: 'Teko', sans-serif;
+}
+
+.navbar{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 40px;
+}
+nav{
+    flex: 1;
+    text-align: right;
+}
+nav ul{
+    display: inline-block;
+    list-style-type: none;
+}
+nav ul li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.menu-icon{
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+/*media query for menu*/
+@media only screen and (max-width: 800px){
+    nav ul {
+        position: absolute;
+        top: 70px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    nav ul li a{
+        color: white;
+    }
+    .menu-icon{
+        display: block;
+        cursor: pointer;
+    }
+}
+
+/*All products page*/
+.row_2{
+    justify-content: space-between;
+    margin: 100px auto 50px;
+}
+select{
+    border: 1px solid #ffbb33;
+    padding: 5px;
+}
+select:focus{
+    outline: none;
+}
+
+.pagebtn{
+    margin: 0 auto 50px;
+}
+.pagebtn span{
+    display: inline-block;
+    border: 1px solid #ffbb33;
+    margin-left: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+}
+.pagebtn span:hover{
+    background: #ffbb33;
+    color: #f2f2f2;
+}
+
+/*media query for less than 600 screen size*/
+@media only screen and (max-width: 600px){
+    .row{
+        text-align: center;
+    }
+    .col-2,.col-4{
+        flex-basis: 100%;
+    }
+    .Characteristics .row{
+        text-align: center;
+    }
+    .Characteristics .col-2{
+        padding: 20px 0;
+    }
+    .Characteristics h1{
+        font-size: 30px;
+        line-height: 22px;
+    }
+    .cartinfo p{
+        display: none;
+    }
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+.container{
+    max-width: 1300px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.col-2{
+    flex-basis: 50%;
+    min-width: 300px;
+}
+.col-2 img{
+    max-width: 100%;
+    padding: 10px 0;
+}
+.col-2 h1{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+    color: orangered;
+}
+.col-2 h2{
+    font-size: 50px;
+    line-height: 60px;
+    margin: 25px 0;
+    animation-name: blinker;
+    color: orangered;
+    animation-duration: 2.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes blinker {
+    0%{opacity: 1.0;}
+    50%{opacity: 0.0;}
+    100%{opacity: 1.0;}
+}
+
+p{
+    color: black;
+    font-size: 30px;
+}
+
+.btn{
+    display: inline-block;
+    background: black;
+    color: aliceblue;
+    padding: 8px 30px;
+    margin: 30px 0;
+    border-radius: 30px;
+    transition: background 0.4s;
+}
+.btn:hover{
+    background: orangered;
+}
+
+.small-container{
+    font-size: 20px;
+    max-width: 1080px;
+    margin: auto;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+
+.col-4{
+    flex-basis: 20%;
+    padding: 10px;
+    min-width: 200px;
+    margin-bottom: 50px;
+    transition: transform 0.5s;
+}
+.col-4 p{
+    font-size: 14px;
+}
+.col-4 img{
+    width: 100%;
+}
+.col-4:hover{
+    transform: translateY(-25px);
+}
+
+.title{
+    text-align: center;
+    margin: 0 auto 80px;
+    position: relative;
+    line-height: 60px;
+    color: black;
+}
+.title::after{
+    content: '';
+    background: orangered;
+    width: 80px;
+    height: 5px;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+h4{
+    color: black;
+    font-weight: normal;
+}
+
+.rating .fa{
+    color: crimson;
+}
+
+.footer{
+    background: #333333;
+    color: #f2f2f2;
+    font-size: 20px;
+    padding: 60px 0 20px;
+}
+.footer h3{
+    text-align: center;
+}
+.footer p{
+    color: #f2f2f2;
+    font-size: 20px;
+    text-align: center;
+}
+.footer hr{
+    border: none;
+    background: #f2f2f2;
+    height: 1px;
+    margin: 20px 0;
+}
+.copyright{
+    text-align: center;
+}
+
+/*Characteristics of the products*/
+.Characteristics{
+    margin-top: 80px;
+}
+.Characteristics .col-2 img{
+    padding: 0;
+}
+.Characteristics .col-2{
+    padding: 20px;
+}
+.Characteristics h4{
+    margin: 20px 0;
+    font-size: 30px;
+    font-weight: bold;
+}
+.Characteristics select{
+    display: block;
+    padding: 10px;
+    margin-top: 20px;
+}
+.Characteristics input{
+    width: 50px;
+    height: 40px;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 10px;
+    border: 1px solid #ffbb33;
+}
+input:focus{
+    outline: none;
+}
+
+.smallimage{
+    display: flex;
+    justify-content: space-between;
+}
+.smallimagecol{
+    flex-basis: 25%;
+    cursor: pointer;
+}
+
+/*shopping cart*/
+.shoppingcart{
+    margin: 80px auto;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+}
+.cartinfo{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+th{
+    text-align: left;
+    padding: 5px;
+    color: black;
+    background: #ffbb33;
+    font-weight: normal;
+}
+
+td{
+    padding: 10px 5px;
+}
+td input{
+    width: 40px;
+    height: 30px;
+    padding: 5px;
+}
+td a{
+    color: #ffbb33;
+    font-size: 18px;
+}
+td img{
+    width: 137px;
+    height: 80px;
+    margin: 10px;
+}
+.totalprice{
+    display: flex;
+    justify-content: flex-end;
+}
+.totalprice table{
+    border-top: 3px solid #ffbb33;
+    width: 100%;
+    max-width: 400px;
+}
+
+/* Style the search field */
+* {
+    box-sizing: border-box;
+}
+form.searchbox input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+form.searchbox button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: #ffbb33;
+    color: white;
+    font-size: 17px;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+form.searchbox button:hover {
+    background: orange;
+}
+form.searchbox::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+form.searchbox{
+    display: inline-block;
+    float: right;
+}
